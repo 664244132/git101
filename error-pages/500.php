@@ -1,4 +1,4 @@
-<?php http_response_code(500); ?>
+<?php declare(strict_types=1); http_response_code(500); ?>
 <!DOCTYPE html>
 <html lang="th">
 
@@ -6,59 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>500 - Internal Server Error | SHOPPÉ</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+    <script src="/git101/assets/libs/snap.svg-min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Prompt:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: #ececec;
-            font-family: 'Prompt', sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        #error {
-            margin: 0 auto;
-            display: block;
-            max-width: 100%;
-        }
-
-        h1 {
-            font-family: 'Inter', sans-serif;
-            font-size: 3rem;
-            color: #0b0909;
-            margin: 0;
-            font-weight: 800;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .btn-home {
-            background-image: linear-gradient(-45deg, #cc3843 0%, #cb193f 100%);
-            color: #fff;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            box-shadow: 0 5px 15px rgba(204, 51, 66, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-home:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(204, 51, 66, 0.6);
-        }
-    </style>
+    <link rel="stylesheet" href="/git101/assets/css/error.css">
   <!-- Favicon -->
   <link rel="icon" href="/git101/images/itlogo.ico" type="image/x-icon">
 </head>
@@ -242,57 +192,7 @@
 
     <h1>500</h1>
     <p>ขออภัยครับ เกิดข้อผิดพลาดทางเซิร์ฟเวอร์ กรุณาลองใหม่อีกครั้ง</p>
-    <script>
-        window.onload = function() {
-            var error = Snap.select("#error"),
-                hole = Snap.select("#svg-hole"),
-                hand = Snap.select("#svg-hand"),
-                mask = Snap.select("#svg-mask");
-
-            var timer;
-
-            function onSVGLoaded() {
-                function animOn() {
-                    hand.animate({
-                        transform: "t10,-300, r0"
-                    }, 4500, mina.easeinout, animOut);
-
-                    mask.animate({
-                        transform: "t-10,300, r0"
-                    }, 4500, mina.easeinout);
-                }
-
-                function animOut() {
-                    hand.animate({
-                        transform: "t-10,-305, r0"
-                    }, 4500, mina.easeinout, animOn);
-
-                    mask.animate({
-                        transform: "t10,305, r0"
-                    }, 4500, mina.easeinout);
-                };
-
-                function open() {
-                    clearTimeout(timer);
-                    hand.animate({
-                        transform: "t0,-300"
-                    }, 800, mina.backout, animOn);
-
-                    mask.animate({
-                        transform: "t0,300"
-                    }, 800, mina.backout);
-
-                }
-                timer = setTimeout(open, 1000);
-
-                hand.attr({
-                    mask: mask
-                });
-            }
-
-            onSVGLoaded();
-        };
-    </script>
+    <script src="/git101/assets/js/error.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+<?php declare(strict_types=1); ?>
 <!DOCTYPE html>
 <html lang="th">
 
@@ -7,14 +8,14 @@
     <title>SHOPPÉ - Elevate Your Everyday Style</title>
 
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/libs/swiper-bundle.min.css" />
 
     <!-- ลิงก์ไฟล์ CSS หลัก และ CSS ของ Slider ที่ถูกแปลงมาจาก SCSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/slider.css">
 
     <!-- ฟอนต์ไอคอนจาก FontAwesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/libs/all.min.css" rel="stylesheet">
     <!-- ฟอนต์จาก Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Favicon -->
@@ -57,21 +58,21 @@
             <div class="content">
                 <div class="bg-shape">
                     <!-- ขอใช้รูปภาพตามที่คุณแนบมาเพื่อให้ Layout แสดงผลถูกต้องที่สุดก่อนนะครับ -->
-                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405214/starwars/logo.webp" alt="">
+                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405214/starwars/logo.webp" alt="Star Wars Logo">
                 </div>
 
                 <div class="product-img">
                     <div class="product-img__item" id="img1">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405217/starwars/item-1.webp" alt="star wars" class="product-img__img">
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405217/starwars/item-1.webp" alt="Imperial Army's TIE Fighter" class="product-img__img">
                     </div>
                     <div class="product-img__item" id="img2">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405217/starwars/item-2.webp" alt="star wars" class="product-img__img">
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405217/starwars/item-2.webp" alt="Kylo Ren's Lightsaber" class="product-img__img">
                     </div>
                     <div class="product-img__item" id="img3">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405218/starwars/item-3.webp" alt="star wars" class="product-img__img">
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405218/starwars/item-3.webp" alt="Imperial Army's Death Star" class="product-img__img">
                     </div>
                     <div class="product-img__item" id="img4">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405215/starwars/item-4.webp" alt="star wars" class="product-img__img">
+                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405215/starwars/item-4.webp" alt="Stormtrooper Helmet" class="product-img__img">
                     </div>
                 </div>
 
@@ -95,7 +96,7 @@
                         <!-- Slide 4 -->
                         <div class="product-slider__item swiper-slide" data-target="img4">
                             <div class="product-slider__card">
-                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405223/starwars/item-4-bg.webp" alt="star wars" class="product-slider__cover">
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405223/starwars/item-4-bg.webp" alt="Stormtrooper Helmet Background" class="product-slider__cover">
                                 <div class="product-slider__content">
                                     <h1 class="product-slider__title">STORMTROPER <br>HELMET</h1>
                                     <span class="product-slider__price">$1.299,<sup>99</sup></span>
@@ -139,7 +140,7 @@
                         <!-- Slide 1 -->
                         <div class="product-slider__item swiper-slide" data-target="img1">
                             <div class="product-slider__card">
-                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405222/starwars/item-1-bg.webp" alt="star wars" class="product-slider__cover">
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405222/starwars/item-1-bg.webp" alt="Imperial Army's TIE Fighter Background" class="product-slider__cover">
                                 <div class="product-slider__content">
                                     <h1 class="product-slider__title">IMPERIAL ARMY’S <br> TIE FIGHTER</h1>
                                     <span class="product-slider__price">$9.999,<sup>99</sup></span>
@@ -181,7 +182,7 @@
                         <!-- Slide 2 -->
                         <div class="product-slider__item swiper-slide" data-target="img2">
                             <div class="product-slider__card">
-                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405222/starwars/item-2-bg.webp" alt="star wars" class="product-slider__cover">
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405222/starwars/item-2-bg.webp" alt="Kylo Ren's Lightsaber Background" class="product-slider__cover">
                                 <div class="product-slider__content">
                                     <h1 class="product-slider__title">KYLO REN'S <br> LIGHTSABER</h1>
                                     <span class="product-slider__price">$1.699,<sup>99</sup></span>
@@ -230,7 +231,7 @@
                         <!-- Slide 3 -->
                         <div class="product-slider__item swiper-slide" data-target="img3">
                             <div class="product-slider__card">
-                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405215/starwars/item-3-bg.webp" alt="star wars" class="product-slider__cover">
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405215/starwars/item-3-bg.webp" alt="Imperial Army's Death Star Background" class="product-slider__cover">
                                 <div class="product-slider__content">
                                     <h1 class="product-slider__title">IMPERIAL ARMY'S <br>DEATH STAR</h1>
                                     <span class="product-slider__price">$9.999,<sup>99</sup></span>
@@ -354,10 +355,11 @@
     </svg>
 
     <!-- jQuery and Swiper JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/libs/jquery-3.6.0.min.js"></script>
+    <script src="assets/libs/swiper-bundle.min.js"></script>
     <!-- ลิงก์ไฟล์ JavaScript หลัก -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/favorite.js"></script>
 </body>
 
 </html>
