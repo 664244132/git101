@@ -1,0 +1,311 @@
+/* =========================================
+   1. CSS Variables & Reset
+   (อ้างอิง: CSSCodingGuide - Custom properties)
+========================================= */
+:root {
+    /* สีหลัก */
+    --bg-color: #0B0909;
+    --text-color: #ffffff;
+    --text-muted: #888888;
+    --accent-color: #e0e0e0; /* สีขาวเทา เป็นสีรองตามภาพ */
+    --border-color: #2a2a2a;
+    --card-bg: #141414;
+    
+    /* ฟอนต์ */
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Prompt', sans-serif;
+}
+
+/* อ้างอิง: CSSCodingGuide - Box model sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ซ่อนข้อความสำหรับ Screen Reader */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus-visible {
+    color: var(--accent-color);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* Container จำกัดความกว้าง */
+.container {
+    max-width: 1200px;
+    margin-inline: auto; /* อ้างอิง: CSSCodingGuide - Logical properties */
+    padding-inline: 20px;
+}
+
+/* =========================================
+   2. Header & Navbar
+========================================= */
+.header {
+    border-bottom: 1px solid var(--border-color);
+    padding-block: 15px; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 30px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.nav-links a.active {
+    color: var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    padding-bottom: 5px;
+}
+
+.nav-links a:not(.active) {
+    color: var(--text-muted);
+}
+
+.nav-links a:not(.active):hover {
+    color: var(--text-color);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--text-muted);
+    padding-bottom: 5px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    outline: none;
+    width: 100px;
+}
+
+.search-bar input::placeholder {
+    color: var(--text-muted);
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon .badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    font-size: 10px;
+    font-weight: 700;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =========================================
+   3. Footer
+========================================= */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding-block-start: 60px;
+    padding-block-end: 20px;
+    margin-block-start: 60px;
+}
+
+.footer-content {
+    display: grid;
+    /* อ้างอิง: CSSCodingGuide - Grid layout tracks */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-brand {
+    grid-column: span 2; /* ให้กินพื้นที่กว้างกว่าคอลัมน์อื่นเล็กน้อย */
+}
+
+.footer-brand h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 80%;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+}
+
+.social-links a:hover {
+    border-color: var(--text-color);
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.footer-links h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: var(--text-color);
+}
+
+.footer-newsletter {
+    grid-column: span 2;
+}
+
+.footer-newsletter h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-newsletter p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+    border-bottom: 1px solid var(--text-muted);
+    padding-bottom: 5px;
+}
+
+.newsletter-form input {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    outline: none;
+    flex: 1;
+}
+
+.newsletter-form button {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.payment-methods {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.payment-methods span {
+    font-size: 12px;
+}
