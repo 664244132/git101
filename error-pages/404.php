@@ -59,6 +59,8 @@
             box-shadow: 0 8px 20px rgba(204, 51, 66, 0.6);
         }
     </style>
+  <!-- Favicon -->
+  <link rel="icon" href="/git101/images/itlogo.ico" type="image/x-icon">
 </head>
 
 <body>
